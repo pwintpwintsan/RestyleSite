@@ -1,7 +1,5 @@
 {
-  "name": "Restyle Loyalty",
-  "description": "A high-end loyalty platform for the Restyle fashion house, bridging offline services to online rewards through AI-powered receipt scanning.",
-  "requestFramePermissions": [
-    "camera"
-  ]
+  "name": "Restyle VIP Circle",
+  "description": "The exclusive loyalty ecosystem for Restyle luxury fashion. Track high-value investments and unlock prestige tiers.",
+  "requestFramePermissions": []
 }

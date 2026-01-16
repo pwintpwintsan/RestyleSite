@@ -9,16 +9,20 @@ interface StatCardProps {
   bgColor?: string;
 }
 
-export const StatCard: React.FC<StatCardProps> = ({ label, value, icon, trend, bgColor = "bg-white" }) => {
+export const StatCard: React.FC<StatCardProps> = ({ label, value, icon, trend, bgColor = "bg-white/5" }) => {
   return (
-    <div className={`${bgColor} p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col`}>
-      <div className="flex justify-between items-start mb-4">
-        <span className="text-gray-500 text-sm font-medium uppercase tracking-wider">{label}</span>
-        {icon && <div className="text-gray-400">{icon}</div>}
+    <div className={`${bgColor} p-8 rounded-[2rem] border border-white/5 flex flex-col hover:border-white/20 transition-all group`}>
+      <div className="flex justify-between items-center mb-6">
+        <span className="text-gray-500 text-[10px] font-black uppercase tracking-[0.25em]">{label}</span>
+        {icon && <div className="text-white/20 group-hover:text-amber-500 transition-colors">{icon}</div>}
       </div>
-      <div className="flex items-baseline gap-2">
-        <h3 className="text-3xl font-bold text-gray-900">{value}</h3>
-        {trend && <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">{trend}</span>}
+      <div className="flex items-baseline gap-3">
+        <h3 className="text-4xl font-serif font-bold text-white tracking-tighter">{value}</h3>
+        {trend && (
+          <span className="text-[10px] font-black text-amber-500 bg-amber-500/10 px-3 py-1 rounded-full uppercase tracking-widest border border-amber-500/20">
+            {trend}
+          </span>
+        )}
       </div>
     </div>
   );

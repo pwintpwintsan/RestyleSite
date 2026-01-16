@@ -1,9 +1,16 @@
 
 export enum Tier {
-  BRONZE = 'Bronze',
+  MEMBER = 'Member',
   SILVER = 'Silver',
   GOLD = 'Gold',
   PLATINUM = 'Platinum'
+}
+
+export interface TierBenefit {
+  tier: Tier;
+  minSpend: number;
+  benefits: string[];
+  color: string;
 }
 
 export interface UserStats {
@@ -11,7 +18,6 @@ export interface UserStats {
   totalSpent: number;
   tier: Tier;
   restyleCount: number;
-  nextRewardPoints: number;
 }
 
 export interface Transaction {
@@ -30,6 +36,7 @@ export interface Reward {
   pointsCost: number;
   image: string;
   category: 'Service' | 'Product' | 'Experience';
+  exclusiveTo?: Tier;
 }
 
 export interface ScannedResult {
