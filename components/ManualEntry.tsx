@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { CATEGORIES as SERVICES } from '../constants';
+import { CATEGORIES as SERVICES } from '../constants.tsx';
 
 interface ManualEntryProps {
   onSuccess: (amount: number, service: string) => void;

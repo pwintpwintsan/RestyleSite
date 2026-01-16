@@ -1,11 +1,10 @@
-
 import React, { useState, useMemo } from 'react';
-import { INITIAL_STATS, MOCK_TRANSACTIONS, AVAILABLE_REWARDS, ICONS, TIER_CONFIG } from './constants';
-import { StatCard } from './components/StatCard';
-import { RewardCard } from './components/RewardCard';
-import { HistoryList } from './components/HistoryList';
-import { ManualEntry } from './components/ManualEntry';
-import { UserStats, Transaction, Reward, Tier } from './types';
+import { INITIAL_STATS, MOCK_TRANSACTIONS, AVAILABLE_REWARDS, ICONS, TIER_CONFIG } from './constants.tsx';
+import { StatCard } from './components/StatCard.tsx';
+import { RewardCard } from './components/RewardCard.tsx';
+import { HistoryList } from './components/HistoryList.tsx';
+import { ManualEntry } from './components/ManualEntry.tsx';
+import { UserStats, Transaction, Reward, Tier } from './types.ts';
 
 type Tab = 'dashboard' | 'rewards' | 'history';
 
@@ -34,7 +33,7 @@ const App: React.FC = () => {
   }, [currentTier, stats.totalSpent]);
 
   const handleAddPurchase = (amount: number, service: string) => {
-    const points = Math.floor(amount / 10); // 1 point per 10 Ks for easier tracking in large currencies
+    const points = Math.floor(amount / 10); 
     const newTransaction: Transaction = {
       id: Date.now().toString(),
       date: new Date().toISOString(),

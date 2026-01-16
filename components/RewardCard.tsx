@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Reward } from '../types';
+import { Reward } from '../types.ts';
 
 interface RewardCardProps {
   reward: Reward;
